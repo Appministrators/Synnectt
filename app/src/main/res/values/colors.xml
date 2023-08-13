@@ -14,4 +14,8 @@
 
     <color name="__bg__landing_page_color">#978D8D</color>
     <color name="synectt_by_appmistators_color">#060404</color>
+    <color name="_bg__login_screen_color">#989393</color>
+    <color name="_rectangle_1_color">#E0E0E0</color>
+    <color name="student_color">#000000</color>
+    <color name="login_register_color">#FFFFFF</color>
 </resources>

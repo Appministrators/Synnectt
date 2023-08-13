@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentRegister">
+
+    <ScrollView android:id="@+id/student_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout android:id="@+id/content_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView android:id="@+id/name_"
+                android:fontFamily="@font/kalam"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_width="147.93dp"
+                android:layout_height="33.08dp"
+                android:text="Name:"
+                />
+
+            <EditText   android:id="@+id/rectangle_10"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="46.8dp"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:inputType="text"/>
+
+            <TextView android:id="@+id/reg_no__"
+                android:fontFamily="@font/kalam"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="112.22dp"
+                android:layout_width="152.85dp"
+                android:layout_height="33.08dp"
+                android:text="Reg. No.:"
+                />
+
+            <EditText   android:id="@+id/rectangle_11"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="142.2dp"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:inputType="number"/>
+
+            <TextView android:id="@+id/phn_no__"
+                android:fontFamily="@font/kalam"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="294.83dp"
+                android:layout_width="152.85dp"
+                android:layout_height="33.08dp"
+                android:text="Phn. No.:"
+                />
+
+            <EditText   android:id="@+id/rectangle_14"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="318dp"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:inputType="phone"/>
+
+            <TextView android:id="@+id/net_id_"
+                android:fontFamily="@font/kalam"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="207.61dp"
+                android:layout_width="203.67dp"
+                android:layout_height="33.08dp"
+                android:text="Net Id:"
+                />
+
+            <EditText   android:id="@+id/rectangle_13"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="229.42dp"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp" />
+
+            <TextView android:id="@+id/__srmist_edu_in"
+                android:fontFamily="@font/kalam"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="229dp"
+                android:layout_marginTop="238dp"
+                android:layout_width="117dp"
+                android:layout_height="32dp"
+                android:text="\@srmist.edu.in"
+                />
+
+            <TextView android:id="@+id/branch"
+                android:fontFamily="@font/kalam"
+                android:textSize="20sp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="469.22dp"
+                android:layout_width="152.85dp"
+                android:layout_height="33.08dp"
+                android:text="Branch:"
+                />
+
+            <EditText   android:id="@+id/rectangle_14_ek1"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="492.38dp"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:inputType="text"/>
+
+            <TextView android:id="@+id/year"
+                android:fontFamily="@font/kalam"
+                android:textSize="20sp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="382dp"
+                android:layout_width="203.67dp"
+                android:layout_height="33.08dp"
+                android:text="Year"
+                />
+
+            <EditText   android:id="@+id/rectangle_13_ek1"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="403.8dp"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/studentRegSubmitBtn"
+                android:layout_marginTop="609dp"
+                android:layout_marginStart="148dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

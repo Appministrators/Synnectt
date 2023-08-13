@@ -15,7 +15,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         new Handler().postDelayed(() -> {
-            Intent splashClose = new Intent(SplashScreenActivity.this, MainActivity.class);
+            Intent splashClose = new Intent(SplashScreenActivity.this, RegisterActivity.class);
             splashClose.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(splashClose);
             finish();

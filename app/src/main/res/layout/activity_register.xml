@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="264dp"
+        android:layout_height="100dp"
+        android:src="@drawable/synectt_by_appministors"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/group_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+
+        <Button
+            android:id="@+id/goToStudReg"
+            android:layout_width="312.1dp"
+            android:layout_height="88.95dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:text="Student"
+            android:textColor="@color/student_color"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/faculty"
+            android:layout_width="312.1dp"
+            android:layout_height="88.95dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="132dp"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:text="Faculty"
+            android:textColor="@color/student_color"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/sponser"
+            android:layout_width="312.1dp"
+            android:layout_height="88.95dp"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="259dp"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:text="Sponser"
+            android:textColor="@color/student_color"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
