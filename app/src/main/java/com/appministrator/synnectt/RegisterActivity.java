@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    Button studBtn;
+    Button studBtn, FacBtn, sponser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +17,29 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         studBtn = findViewById(R.id.goToStudReg);
-
+        FacBtn = findViewById(R.id.facultyReg);
+        sponser = findViewById(R.id.sponser);
         studBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(RegisterActivity.this, StudentRegister.class));
-                finish();
+                //finish();
             }
         });
+        FacBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this, FacultyRegister.class));
+                //finish();
+            }
+        });
+        sponser.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(RegisterActivity.this, sponserRegister.class));
+                        //finish();
+                    }
+                });
+
     }
 }

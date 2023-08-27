@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sponserRegister">
+    <ScrollView android:id="@+id/SponserReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/content_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/name_"
+                android:layout_width="287dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/kalam"
+                android:text="Name of the incharge:"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/rectangle_10"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="46.8dp"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/GSTIN"
+                android:layout_width="152.85dp"
+                android:layout_height="33.08dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="112.22dp"
+                android:fontFamily="@font/kalam"
+                android:text="GSTIN"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/rectangle_11"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="142.2dp"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/emailid"
+                android:layout_width="203.67dp"
+                android:layout_height="33.08dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="207.61dp"
+                android:fontFamily="@font/kalam"
+                android:text="Email Id:"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/rectangle_13"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="229.42dp" />
+
+            <TextView
+                android:id="@+id/phn_no__"
+                android:layout_width="152.85dp"
+                android:layout_height="33.08dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="294.83dp"
+                android:fontFamily="@font/kalam"
+                android:text="Phn. No.:"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/rectangle_14"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="318dp"
+                android:inputType="phone"
+                android:maxLength="10" />
+
+            <TextView
+                android:id="@+id/Org_ID"
+                android:layout_width="203.67dp"
+                android:layout_height="33.08dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="382dp"
+                android:fontFamily="@font/kalam"
+                android:text="Organisation ID"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/rectangle_13_ek1"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="403.8dp"
+                android:inputType="number"
+                android:maxLength="21" />
+
+            <Button
+                android:id="@+id/sponSubBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:layout_marginStart="148dp"
+                android:layout_marginTop="609dp"
+                android:text="Submit" />
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

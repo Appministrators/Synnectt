@@ -41,7 +41,7 @@
 
 
         <Button
-            android:id="@+id/faculty"
+            android:id="@+id/facultyReg"
             android:layout_width="312.1dp"
             android:layout_height="88.95dp"
             android:layout_gravity="center"

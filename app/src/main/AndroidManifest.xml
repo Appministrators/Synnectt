@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Synnectt"
         tools:targetApi="31">
         <activity
+            android:name=".sponserRegister"
+            android:exported="false" />
+        <activity
+            android:name=".FacultyRegister"
+            android:exported="false" />
+        <activity
             android:name=".StudentRegister"
             android:exported="false" />
         <activity
