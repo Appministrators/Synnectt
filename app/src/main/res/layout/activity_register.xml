@@ -22,7 +22,7 @@
         android:layout_width="264dp"
         android:layout_height="100dp"
         android:src="@drawable/synectt_by_appministors"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,15 +34,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/imageView">
 
         <ImageView
             android:id="@+id/pic"
-            android:layout_width="226dp"
-            android:layout_height="179dp"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="240dp"
-            android:contentDescription="pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:src="@drawable/connectree" />
 
 
@@ -50,141 +50,72 @@
             android:id="@+id/register"
             android:layout_width="193dp"
             android:layout_height="73dp"
+            android:layout_below="@id/pic"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="center_horizontal|center"
-            android:layout_marginLeft="114dp"
-            android:layout_marginTop="434dp"
             android:fontFamily="@font/comfortaa"
             android:gravity="center"
             android:text="Register"
             android:textColor="@color/black"
             android:textSize="40sp" />
 
-
-        <RelativeLayout
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="89dp"
-            android:layout_marginTop="653dp">
-
-            <ImageView
-                android:id="@+id/rectangle_2"
-                android:layout_width="240dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:contentDescription="rectangle_2"
-                android:src="@drawable/rectangle_2" />
-
-            <TextView
-                android:id="@+id/faculty"
-                android:layout_width="102dp"
-                android:layout_height="29.5dp"
-                android:layout_gravity="center_horizontal|center"
-                android:layout_marginLeft="66dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="Roboto"
-                android:gravity="center"
-                android:text="@string/faculty_string"
-                android:textColor="@color/synectt_color"
-                android:textSize="15sp" />
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:id="@+id/button_ek1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="89dp"
-            android:layout_marginTop="749dp">
-
-            <ImageView
-                android:id="@+id/rectangle_2_ek1"
-                android:layout_width="240dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:contentDescription="rectangle_2_ek1"
-                android:src="@drawable/rectangle_2_ek1" />
-
-            <TextView
-                android:id="@+id/sponser"
-                android:layout_width="102dp"
-                android:layout_height="29.5dp"
-                android:layout_gravity="center_horizontal|center"
-                android:layout_marginLeft="72dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="Roboto"
-                android:gravity="center"
-                android:text="@string/sponser_string"
-                android:textColor="@color/synectt_color"
-                android:textSize="15sp" />
-
-        </RelativeLayout>
-        
         <Button
+            android:id="@+id/goToStudReg"
             android:layout_width="240dp"
-            android:layout_height="52dp"
+            android:layout_height="wrap_content"
             android:text="Student"
             android:layout_marginStart="89dp"
-            android:layout_marginTop="548dp"
+            android:layout_below="@id/register"/>
 
+        <Button
+            android:id="@+id/goToFacReg"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Sponsor"
+            android:layout_marginStart="89dp"
+            android:layout_below="@id/goToStudReg"/>
 
-        <RelativeLayout
-            android:id="@+id/button_ek2"
+        <Button
+            android:id="@+id/goToSponReg"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Faculty"
+            android:layout_marginStart="89dp"
+            android:layout_below="@id/goToFacReg"/>
+
+        <TextView
+            android:id="@+id/loginAlready"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="89dp"
-            android:layout_marginTop="548dp">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/goToSponReg"
+            android:text="Already have account? Login Here" />
 
-            <ImageView
-                android:id="@+id/rectangle_2_ek2"
-                android:layout_width="240dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:contentDescription="rectangle_2_ek2"
-                android:src="@drawable/rectangle_2_ek2" />
-
-            <TextView
-                android:id="@+id/student"
-                android:layout_width="80dp"
-                android:layout_height="28.5dp"
-                android:layout_gravity="center_horizontal|center"
-                android:layout_marginLeft="83dp"
-                android:layout_marginTop="21dp"
-                android:fontFamily="Roboto"
-                android:gravity="center"
-                android:text="@string/student_string"
-                android:textColor="@color/synectt_color"
-                android:textSize="15sp" />
-
-        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/frame_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="527dp">
+            android:layout_below="@id/register">
 
             <ImageView
-                android:id="@+id/stu1_1"
+                android:id="@+id/stud_icon"
                 android:layout_width="32dp"
                 android:layout_height="38dp"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="28dp"
                 android:contentDescription="stu1_1"
                 android:src="@drawable/stud_icon" />
 
 
-            <ImageView
-                android:id="@+id/fac_1"
+            <!--<ImageView
+                android:id="@+id/fac_icon"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginStart="21dp"
-                android:layout_marginTop="136dp"
+                android:layout_below="@id/stud_icon"
                 android:contentDescription="fac_1"
                 android:src="@drawable/institution" />
 
@@ -193,9 +124,9 @@
                 android:layout_width="37dp"
                 android:layout_height="34dp"
                 android:layout_marginStart="19dp"
-                android:layout_marginTop="231dp"
+                android:layout_below="@id/fac_icon"
                 android:contentDescription="spon_1"
-                android:src="@drawable/management" />
+                android:src="@drawable/management" />-->
 
 
         </RelativeLayout>

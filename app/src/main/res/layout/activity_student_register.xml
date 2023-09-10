@@ -49,7 +49,7 @@
                 android:layout_marginTop="142.2dp"
                 android:layout_width="313.07dp"
                 android:layout_height="39.52dp"
-                android:inputType="number"/>
+                android:inputType="text"/>
 
             <TextView android:id="@+id/phn_no__"
                 android:fontFamily="@font/kalam"
@@ -99,35 +99,35 @@
                 android:fontFamily="@font/kalam"
                 android:textSize="20sp"
                 android:layout_marginLeft="17dp"
-                android:layout_marginTop="469.22dp"
-                android:layout_width="152.85dp"
-                android:layout_height="33.08dp"
-                android:text="Branch:"
-                />
-
-            <EditText   android:id="@+id/stu_branch_edt"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="492.38dp"
-                android:layout_width="313.07dp"
-                android:layout_height="39.52dp"
-                android:inputType="text"/>
-
-            <TextView android:id="@+id/year"
-                android:fontFamily="@font/kalam"
-                android:textSize="20sp"
-                android:layout_marginLeft="17dp"
                 android:layout_marginTop="382dp"
                 android:layout_width="203.67dp"
                 android:layout_height="33.08dp"
-                android:text="Year"
+                android:text="Branch"
                 />
 
-            <EditText   android:id="@+id/year_edt"
+            <EditText   android:id="@+id/stu_branch_edt"
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="403.8dp"
                 android:layout_width="313.07dp"
                 android:layout_height="39.52dp"
                 android:inputType="text" />
+
+            <TextView android:id="@+id/password"
+                android:fontFamily="@font/kalam"
+                android:textSize="20sp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="469.22dp"
+                android:layout_width="152.85dp"
+                android:layout_height="33.08dp"
+                android:text="Password:"
+                />
+
+            <EditText   android:id="@+id/stu_pw_edt"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="492.38dp"
+                android:layout_width="313.07dp"
+                android:layout_height="39.52dp"
+                android:inputType="textPassword"/>
 
             <Button
                 android:id="@+id/studentRegSubmitBtn"
