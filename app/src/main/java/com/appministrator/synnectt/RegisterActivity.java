@@ -6,10 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class RegisterActivity extends AppCompatActivity {
 
     Button studBtn, FacBtn, sponser;
+    private FirebaseAuth fAuth;
+    FirebaseUser fUser;
+    FirebaseFirestore fStore;
+    private DocumentReference mUserDocRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +29,9 @@ public class RegisterActivity extends AppCompatActivity {
         studBtn = findViewById(R.id.goToStudReg);
         FacBtn = findViewById(R.id.facultyReg);
         sponser = findViewById(R.id.sponser);
+
+
+
         studBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

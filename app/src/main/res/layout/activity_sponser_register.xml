@@ -29,7 +29,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/rectangle_10"
+                android:id="@+id/Name_Incharge_edt"
                 android:layout_width="313.07dp"
                 android:layout_height="39.52dp"
                 android:layout_marginStart="16dp"
@@ -47,7 +47,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/rectangle_11"
+                android:id="@+id/GSTIN_edt"
                 android:layout_width="313.07dp"
                 android:layout_height="39.52dp"
                 android:layout_marginStart="16dp"
@@ -65,7 +65,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/rectangle_13"
+                android:id="@+id/email_id_edt"
                 android:layout_width="313.07dp"
                 android:layout_height="39.52dp"
                 android:layout_marginStart="16dp"
@@ -82,7 +82,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/rectangle_14"
+                android:id="@+id/spon_phn_no_edt"
                 android:layout_width="313.07dp"
                 android:layout_height="39.52dp"
                 android:layout_marginStart="16dp"
@@ -101,7 +101,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/rectangle_13_ek1"
+                android:id="@+id/Org_ID_edt"
                 android:layout_width="313.07dp"
                 android:layout_height="39.52dp"
                 android:layout_marginStart="17dp"

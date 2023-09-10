@@ -26,14 +26,14 @@
                 android:text="Name:"
                 />
 
-            <EditText   android:id="@+id/rectangle_10"
+            <EditText android:id="@+id/Fac_Name"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="46.8dp"
                 android:layout_width="313.07dp"
                 android:layout_height="39.52dp"
                 android:inputType="text"/>
 
-            <TextView android:id="@+id/reg_no__"
+            <TextView android:id="@+id/Fac_id"
                 android:fontFamily="@font/kalam"
                 android:textSize="20sp"
                 android:layout_marginLeft="16dp"
@@ -43,7 +43,7 @@
                 android:text="Faculty ID:"
                 />
 
-            <EditText   android:id="@+id/rectangle_11"
+            <EditText   android:id="@+id/Fac_ID_edt"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="142.2dp"
                 android:layout_width="313.07dp"
@@ -60,7 +60,7 @@
                 android:text="Phn. No.:"
                 />
 
-            <EditText   android:id="@+id/rectangle_14"
+            <EditText   android:id="@+id/fac_Phn_No_edt"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="318dp"
                 android:layout_width="313.07dp"
@@ -77,7 +77,7 @@
                 android:text="Net Id:"
                 />
 
-            <EditText   android:id="@+id/rectangle_13"
+            <EditText   android:id="@+id/NET_ID_edt"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="229.42dp"
                 android:layout_width="313.07dp"
@@ -104,7 +104,7 @@
                 android:text="Department"
                 />
 
-            <EditText   android:id="@+id/rectangle_13_ek1"
+            <EditText   android:id="@+id/Dept_edt"
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="403.8dp"
                 android:layout_width="313.07dp"
