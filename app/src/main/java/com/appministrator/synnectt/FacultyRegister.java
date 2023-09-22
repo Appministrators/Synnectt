@@ -22,8 +22,8 @@ public class FacultyRegister extends AppCompatActivity {
     FirebaseFirestore fStore;
     private DocumentReference mUserDocRef;
 
-    String FacultyName, StudentName, SponserName, FacutlyID, StudentID, SponserID, FacutlyPh, StudentPh, SponserPh, FacutlyDept, StudentDept;
-    private EditText FACNAMEedt, FACIDedt, FACPHedt, FACDeptedt;
+    String FacultyName, FacutlyID, FacutlyPh, FacutlyDept, Facpw, Faccpw;
+    private EditText FACNAMEedt, FACIDedt, FACPHedt, FACDeptedt, Facpwedt, Faccpwedt;
     Button regBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,8 @@ public class FacultyRegister extends AppCompatActivity {
         FACIDedt = findViewById(R.id.NET_ID_edt);
         FACPHedt = findViewById(R.id.fac_Phn_No_edt);
         FACDeptedt = findViewById(R.id.Dept_edt);
+        Facpwedt = findViewById(R.id.fac_pw_edt);
+        Faccpwedt = findViewById(R.id.fac_cpw_edt);
 
         regBtn = findViewById(R.id.FacRegSubBtn);
 

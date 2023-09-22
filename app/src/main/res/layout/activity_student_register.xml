@@ -194,7 +194,7 @@
                 android:drawablePadding="@dimen/_16pxh"
                 android:drawableStart="@drawable/img_mail"
                 android:ellipsize="end"
-                android:hint="abc@email.com"
+                android:hint="abc@srmist.edu.in"
                 android:id="@+id/stu_net_id"
                 android:inputType="textEmailAddress"
                 android:layout_height="wrap_content"

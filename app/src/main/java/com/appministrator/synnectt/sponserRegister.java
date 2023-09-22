@@ -11,16 +11,16 @@ import android.widget.Toast;
 
 public class sponserRegister extends AppCompatActivity {
     Button regBtn;
-    private EditText SPONNAMEedt, GSTINedt, SPONIDedt,SPONPHedt, ORGIDedt;
+    private EditText SPONNAMEedt, GSTINedt, SPONIDedt,SPONPHedt, ORGIDedt, OrgPwedt, OrgcPwedt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sponser_register);
 
         regBtn = findViewById(R.id.sponSubBtn);
-
         SPONNAMEedt = findViewById(R.id.Name_Incharge_edt);
-        GSTINedt = findViewById(R.id.GSTIN_edt);
+        OrgPwedt = findViewById(R.id.org_pw_edt);
+        OrgcPwedt = findViewById(R.id.org_cpw_edt);
         SPONIDedt = findViewById(R.id.email_id_edt);
         SPONPHedt = findViewById(R.id.spon_phn_no_edt);
         ORGIDedt = findViewById(R.id.Org_ID_edt);
