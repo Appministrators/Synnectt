@@ -33,10 +33,11 @@ public class sponserRegister extends AppCompatActivity {
     FirebaseFirestore fStore;
     private DocumentReference mUserDocRef;
     private EditText SPONNAMEedt, SPONIDedt,SPONPHedt, ORGIDedt, OrgPwedt, OrgcPwedt;
-    String sponname, sponid, sponph, orgid, orgpw;
+    String sponname, sponid, sponph, orgid, orgpw, orgcpw, orgdpt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        firebaseInit();
         setContentView(R.layout.activity_sponser_register);
 
         regBtn = findViewById(R.id.sponSubBtn);
@@ -74,13 +75,12 @@ public class sponserRegister extends AppCompatActivity {
                     sponname = SPONNAMEedt.getText().toString().trim();
                     sponid = SPONIDedt.getText().toString();
                     sponph = SPONPHedt.getText().toString().trim();
-                    studPhno = StuPhedt.getText().toString().trim();
-                    studPw = StudPwEdt.getText().toString().trim();
-                    studCpw = StudCpwEdt.getText().toString().trim();
-                    studDept = StuDeptEdt.getText().toString().trim();
+                    orgpw = OrgPwedt.getText().toString().trim();
+                    orgcpw = OrgcPwedt.getText().toString().trim();
+                    orgid = ORGIDedt.getText().toString().trim();
 
-                    if(!Objects.equals(studCpw, studPw)) {
-                        Toast.makeText(StudentRegister.this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
+                    if(!Objects.equals(orgcpw, orgpw)) {
+                        Toast.makeText(sponserRegister.this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
                         return;
                     }
                 }
@@ -92,21 +92,28 @@ public class sponserRegister extends AppCompatActivity {
                                 fUser = task.getResult().getUser();
                                 if (fUser!=null) fUid = fUser.getUid();
                                 mUserDocRef = fStore.collection("users").document(fUid);
-                                Map<String, Object> studInfo = new HashMap<>();
-                                studInfo.put("studName", studName);
-                                studInfo.put("studNetId", studNetId);
-                                studInfo.put("studRegno", studRegno);
-                                studInfo.put("studPhno", studPhno);
-                                studInfo.put("studDept", studDept);
+                                Map<String, Object> sponInfo = new HashMap<>();
+                                sponInfo.put("SponName", sponname);
+                                sponInfo.put("Sponid", sponid);
+                                sponInfo.put("SponPh", sponph);
+                                sponInfo.put("OrgId", orgid);
 
-                                mUserDocRef.set(studInfo).addOnSuccessListener(unused -> {
-                                    startActivity(new Intent(StudentRegister.this, MainActivity.class));
+                                mUserDocRef.set(sponInfo).addOnSuccessListener(unused -> {
+                                    startActivity(new Intent(sponserRegister.this, MainActivity.class));
                                     finish();
                                 }).addOnFailureListener(e -> Log.e(TAG, "onFailure: firebase updating failed" + e.getMessage()));
                             }
                         }
                     });
             }
+        });
+    }
+    private void firebaseInit(){
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        if (fAuth.getCurrentUser()!=null){
+            startActivity(new Intent(sponserRegister.this, MainActivity.class));
+            finish();
         }
-    });
-}}
+    }
+}

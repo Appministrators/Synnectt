@@ -1,18 +1,29 @@
 package com.appministrator.synnectt;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 public class FacultyRegister extends AppCompatActivity {
 
@@ -21,7 +32,6 @@ public class FacultyRegister extends AppCompatActivity {
     String fUid;
     FirebaseFirestore fStore;
     private DocumentReference mUserDocRef;
-
     String FacultyName, FacutlyID, FacutlyPh, FacutlyDept, Facpw, Faccpw;
     private EditText FACNAMEedt, FACIDedt, FACPHedt, FACDeptedt, Facpwedt, Faccpwedt;
     Button regBtn;
@@ -45,24 +55,48 @@ public class FacultyRegister extends AppCompatActivity {
             public void onClick(View view) {
                 //startActivity(new Intent(FacultyRegister.this, MainActivity.class));
                 boolean empty =
-                        FACNAMEedt.getText().toString().isEmpty() ||
-                                FACPHedt.getText().toString().isEmpty() ||
-                                FACIDedt.getText().toString().isEmpty() ||
+                                FACNAMEedt.getText().toString().isEmpty() ||
+                                Facpwedt.getText().toString().isEmpty() ||
+                                Faccpwedt.getText().toString().isEmpty() ||
+                                FACIDedt.getText().toString().isEmpty()||
+                                FACPHedt.getText().toString().isEmpty()||
                                 FACDeptedt.getText().toString().isEmpty();
                 if (!empty) {
-                    if (FACIDedt.getText().length() != 6) {
-                        FACIDedt.setError("Enter a valid NETID without @srmist.edu.in");
-                        Toast.makeText(FacultyRegister.this, "Invalid NETID", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
                     if(FACPHedt.getText().length() != 10){
                         FACPHedt.setError("Enter a 10digit valid phone number");
                         Toast.makeText(FacultyRegister.this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
                         return;
                     }
-
-                    FacutlyID = FACIDedt.getText().toString()+"@srmist.edu.in";
+                    FacultyName = FACNAMEedt.getText().toString().trim();
+                    FacutlyID = FACIDedt.getText().toString();
+                    Faccpw = Faccpwedt.getText().toString().trim();
+                    Facpw = Facpwedt.getText().toString().trim();
+                    FacutlyPh = FACPHedt.getText().toString().trim();
                 }
+                if(!Objects.equals(Faccpw, Facpw)) {
+                    Toast.makeText(FacultyRegister.this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                fAuth.createUserWithEmailAndPassword(FacutlyID, Facpw).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            fUser = task.getResult().getUser();
+                            if (fUser!=null) fUid = fUser.getUid();
+                            mUserDocRef = fStore.collection("users").document(fUid);
+                            Map<String, Object> FacInfo = new HashMap<>();
+                            FacInfo.put("FacultyName", FacultyName);
+                            FacInfo.put("FacultyID", FacutlyID);
+                            FacInfo.put("SponPh", sponph);
+                            FacInfo.put("OrgId", orgid);
+
+                            mUserDocRef.set(FacInfo).addOnSuccessListener(unused -> {
+                                startActivity(new Intent(FacultyRegister.this, MainActivity.class));
+                                finish();
+                            }).addOnFailureListener(e -> Log.e(TAG, "onFailure: firebase updating failed" + e.getMessage()));
+                        }
+                    }
+                });
 
             }
         });
