@@ -72,6 +72,7 @@ public class FacultyRegister extends AppCompatActivity {
                     Faccpw = Faccpwedt.getText().toString().trim();
                     Facpw = Facpwedt.getText().toString().trim();
                     FacutlyPh = FACPHedt.getText().toString().trim();
+                    FacutlyDept = FACDeptedt.getText().toString().trim();
                 }
                 if(!Objects.equals(Faccpw, Facpw)) {
                     Toast.makeText(FacultyRegister.this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
@@ -87,8 +88,8 @@ public class FacultyRegister extends AppCompatActivity {
                             Map<String, Object> FacInfo = new HashMap<>();
                             FacInfo.put("FacultyName", FacultyName);
                             FacInfo.put("FacultyID", FacutlyID);
-                            FacInfo.put("SponPh", sponph);
-                            FacInfo.put("OrgId", orgid);
+                            FacInfo.put("FacultyPh", FacutlyPh);
+                            FacInfo.put("FacultyDept", FacutlyDept);
 
                             mUserDocRef.set(FacInfo).addOnSuccessListener(unused -> {
                                 startActivity(new Intent(FacultyRegister.this, MainActivity.class));
@@ -97,7 +98,6 @@ public class FacultyRegister extends AppCompatActivity {
                         }
                     }
                 });
-
             }
         });
     }
