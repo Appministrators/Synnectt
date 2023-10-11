@@ -66,11 +66,6 @@ public class StudentRegister extends AppCompatActivity {
                                 StudPwEdt.getText().toString().isEmpty() ||
                                 StuDeptEdt.getText().toString().isEmpty();
                 if (!empty) {
-                    if (StudNetIdEdt.getText().length() != 6) {
-                        StudNetIdEdt.setError("Enter a valid NETID without @srmist.edu.in");
-                        Toast.makeText(StudentRegister.this, "Invalid NETID", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
                     if(StuPhedt.getText().length() != 10){
                         StuPhedt.setError("Enter a 10digit valid phone number");
                         Toast.makeText(StudentRegister.this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
@@ -78,7 +73,7 @@ public class StudentRegister extends AppCompatActivity {
                     }
 
                     studName = STUNAMEedt.getText().toString().trim();
-                    studNetId = StudNetIdEdt.getText().toString()+"@srmist.edu.in";
+                    studNetId = StudNetIdEdt.getText().toString();
                     studRegno = StuRegNoedt.getText().toString().trim();
                     studPhno = StuPhedt.getText().toString().trim();
                     studPw = StudPwEdt.getText().toString().trim();
