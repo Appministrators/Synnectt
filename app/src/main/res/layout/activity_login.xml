@@ -107,7 +107,6 @@
                 android:paddingStart="@dimen/_16pxh"
                 android:paddingTop="@dimen/_19pxv"
                 android:singleLine="true"
-                android:text="Email"
                 android:textColorHint="@color/gray_600"
                 style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
             <EditText
@@ -130,7 +129,6 @@
                 android:paddingStart="@dimen/_18pxh"
                 android:paddingTop="@dimen/_19pxv"
                 android:singleLine="true"
-                android:text="@={signInVM.signInModel.etGroup33330Value}"
                 android:textColorHint="@color/gray_600"
                 style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
             <TextView android:ellipsize="end"

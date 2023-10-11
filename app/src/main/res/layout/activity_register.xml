@@ -21,7 +21,7 @@
         android:id="@+id/imageView"
         android:layout_width="264dp"
         android:layout_height="100dp"
-        android:src="@drawable/synectt_by_appministors"
+        android:src="@drawable/synectt_by_appministers"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
