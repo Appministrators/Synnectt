@@ -12,16 +12,12 @@
         android:icon="@drawable/img_bag"
         android:title="Events"/>
 
-    <item
-        android:id="@+id/placeholder"
-        android:enabled="false"
-        android:title=""/>
 
     <item
         android:id="@+id/page_map"
         android:enabled="true"
         android:icon="@drawable/baseline_explore_24"
-        android:title="Explore"/>
+        android:title="Calender"/>
 
     <item
         android:id="@+id/page_profile"

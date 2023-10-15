@@ -33,31 +33,28 @@
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent" android:orientation="horizontal"
                         android:weightSum="10">
-                        <ImageView android:id="@+id/imageMenu"
-                            android:layout_height="@dimen/_24pxh"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_gravity="center"
-                            android:src="@drawable/img_menu"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_menu"/>
-                        <TextView android:ellipsize="end"
-                            android:gravity="center"
+
+                        <TextView
                             android:id="@+id/linearColumngroupten"
+                            style="@style/txtAirbnbCerealAppmedium13"
+                            android:layout_width="337dp"
                             android:layout_height="match_parent"
-                            android:layout_width="0dp"
-                            android:layout_weight="8"
-                            android:textSize="18sp"
+                            android:layout_weight="7"
+                            android:ellipsize="end"
+                            android:gravity="center"
                             android:singleLine="true"
                             android:text="Synnect"
-                            style="@style/txtAirbnbCerealAppmedium13"/>
+                            android:textSize="18sp" />
 
-                        <ImageView android:id="@+id/imageCheckmark"
+                        <ImageView
+                            android:id="@+id/imageCheckmark"
+                            android:layout_width="50dp"
                             android:layout_height="@dimen/_36pxh"
-                            android:layout_width="0dp"
                             android:layout_weight="1"
                             android:scaleType="fitXY"
                             android:src="@drawable/img_checkmark"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark"/>
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/img_checkmark" />
                     </LinearLayout>
                 </androidx.appcompat.widget.Toolbar>
 
@@ -194,15 +191,16 @@
                     android:singleLine="true"
                     android:text="Notice Board"
                     style="@style/txtAirbnbCerealAppmedium18"/>
+
                 <LinearLayout
-                    android:layout_marginEnd="@dimen/_6pxh"
-                    android:layout_marginTop="@dimen/_8pxv"
-                    android:background="@drawable/rectangle_bg_cyan_a400_28_radius_12"
                     android:id="@+id/viewRectangle"
-                    android:layout_height="@dimen/_150pxv"
+                    android:layout_width="match_parent"
+                    android:layout_height="201dp"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"/>
+                    android:layout_marginTop="@dimen/_8pxv"
+                    android:layout_marginEnd="@dimen/_6pxh"
+                    android:background="@drawable/rectangle_bg_cyan_a400_28_radius_12"
+                    android:orientation="vertical" />
 
 
             </LinearLayout>

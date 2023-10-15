@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/teal_200">
+        android:backgroundTint="@color/cyan_A400_28">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/event_dashboard"

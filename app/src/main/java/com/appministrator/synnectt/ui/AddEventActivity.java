@@ -18,6 +18,9 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -29,21 +32,24 @@ import com.appministrator.synnectt.R;
 
 public class AddEventActivity extends AppCompatActivity {
 
+    private FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     Button regBtn;
+    private CollectionReference mEventsColRef;
     private EditText evename_edt, evedate_edt, eveabout_edt, evecontact_edt, evevenue_edt, evetype_edt;
     String EveName, EveDate, EveAbout, EveContact, EveVenue, EveType;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        firebaseInit();
         setContentView(R.layout.activity_add_event);
 
-        regBtn = findViewById(R.id.eveRegSubmitBtn);
+        regBtn = findViewById(R.id.submitNewEventBtn);
 
         evename_edt = findViewById(R.id.eve_name_edt);
         evedate_edt = findViewById(R.id.eve_date_edt);
         eveabout_edt = findViewById(R.id.eve_info_edt);
-        evecontact_edt = findViewById(R.id.eve_contant_edt);
+        evecontact_edt = findViewById(R.id.eve_contact_edt);
         evevenue_edt = findViewById(R.id.eve_venue_edt);
         evetype_edt = findViewById(R.id.eve_type_edt);
         regBtn.setOnClickListener(new View.OnClickListener() {
@@ -69,8 +75,25 @@ public class AddEventActivity extends AppCompatActivity {
                     EveType = evetype_edt.getText().toString().trim();
                     EveContact = evecontact_edt.getText().toString().trim();
                     EveVenue = evevenue_edt.getText().toString().trim();
+
+                    Map<String, Object> studInfo = new HashMap<>();
+                    studInfo.put("EveName", EveName);
+                    studInfo.put("EveDate", EveDate);
+                    studInfo.put("EveAbout", EveAbout);
+                    studInfo.put("EveContact", EveContact);
+                    studInfo.put("EveVenue", EveVenue);
+
+                    mEventsColRef.set(studInfo).addOnSuccessListener(unused -> {
+                        startActivity(new Intent(AddEventActivity.this, MainActivity.class));
+                        finish();
+                    }).addOnFailureListener(e -> Log.e(TAG, "onFailure: firebase updating failed" + e.getMessage()));
                 }
             }
         });
+    }
+    private void firebaseInit(){
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        mEventsColRef = fStore.collection("events");
     }
 }
