@@ -1,12 +1,17 @@
 package com.appministrator.synnectt.models;
 
-import com.google.firebase.Timestamp;
-
 public class event {
-    private String name, venue, type, about;
-    private Timestamp date;
+    private String name, venue, type, about, date;
 
-    public event(String name, String venue, String type, String about, Timestamp date) {
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public event(String name, String venue, String type, String about, String date) {
         this.name = name;
         this.venue = venue;
         this.type = type;
@@ -49,11 +54,4 @@ public class event {
         this.about = about;
     }
 
-    public Timestamp getDate() {
-        return date;
-    }
-
-    public void setDate(Timestamp date) {
-        this.date = date;
-    }
 }

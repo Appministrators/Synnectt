@@ -12,6 +12,10 @@
         android:icon="@drawable/img_bag"
         android:title="Events"/>
 
+    <item
+        android:id="@+id/placeholder"
+        android:enabled="false"
+        android:title=""/>
 
     <item
         android:id="@+id/page_map"

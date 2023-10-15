@@ -29,33 +29,46 @@
                     android:layout_marginTop="@dimen/_8pxv"
                     android:layout_marginBottom="@dimen/_8pxv"
                     android:layout_width="match_parent" app:contentInsetStart="0dp">
-                    <LinearLayout android:id="@+id/linearRowmenu"
+                    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/linearRowmenu"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent" android:orientation="horizontal"
-                        android:weightSum="10">
+                        android:weightSum="10"
+                        android:layout_gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:src="@drawable/img_menu"
+                            tools:ignore="ContentDescription"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                         <TextView
                             android:id="@+id/linearColumngroupten"
                             style="@style/txtAirbnbCerealAppmedium13"
-                            android:layout_width="337dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_weight="7"
                             android:ellipsize="end"
                             android:gravity="center"
                             android:singleLine="true"
                             android:text="Synnect"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                         <ImageView
                             android:id="@+id/imageCheckmark"
-                            android:layout_width="50dp"
-                            android:layout_height="@dimen/_36pxh"
-                            android:layout_weight="1"
-                            android:scaleType="fitXY"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
                             android:src="@drawable/img_checkmark"
                             tools:ignore="ContentDescription"
-                            tools:src="@drawable/img_checkmark" />
-                    </LinearLayout>
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.appcompat.widget.Toolbar>
 
             </LinearLayout>
@@ -124,7 +137,7 @@
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    itemSpace="@{@dimen/_16pxh}" tools:itemCount="2" tools:listitem="@layout/highlight_event_card"/>
+                    tools:listitem="@layout/highlight_event_card"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout android:gravity="start"
                     android:layout_height="wrap_content"
@@ -168,19 +181,16 @@
                             tools:ignore="ContentDescription" />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/upEventsRv"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_13pxv"
-                        android:layout_width="wrap_content"
-                        android:orientation="horizontal"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        tools:listitem="@layout/dash_event_card"
-                        android:isScrollContainer="true"/>
-                </HorizontalScrollView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/upEventsRv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/dash_event_card"
+                    android:isScrollContainer="true"
+                    />
+
+
 
 
                 <TextView android:ellipsize="end"

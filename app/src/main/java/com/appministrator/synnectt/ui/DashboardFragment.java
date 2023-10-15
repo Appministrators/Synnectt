@@ -53,7 +53,6 @@ public class DashboardFragment extends Fragment {
 
         adapter = new eventsRvAdapter(options);
 
-        eventsRv.setHasFixedSize(true);
         eventsRv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         eventsRv.setAdapter(adapter);
     }

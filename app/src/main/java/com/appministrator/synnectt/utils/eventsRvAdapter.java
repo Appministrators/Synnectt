@@ -15,6 +15,10 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Objects;
 
 public class eventsRvAdapter extends FirestoreRecyclerAdapter<event, eventsRvAdapter.eventRvHolder> {
 
@@ -26,7 +30,13 @@ public class eventsRvAdapter extends FirestoreRecyclerAdapter<event, eventsRvAda
     @Override
     protected void onBindViewHolder(@NonNull eventRvHolder holder, int position, @NonNull event model) {
         holder.eventTitle.setText(model.getName());
-        holder.eventDate.setText(DateFormat.getDateInstance().format(model.getDate().toDate()));
+        SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+        SimpleDateFormat format2 = new SimpleDateFormat("dd-MMM-yy");
+        try {
+            holder.eventDate.setText(format2.format(Objects.requireNonNull(format1.parse(model.getDate()))));
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
         holder.eventLoc.setText(model.getVenue());
     }
 
