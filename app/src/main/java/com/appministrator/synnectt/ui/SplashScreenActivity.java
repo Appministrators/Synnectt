@@ -1,4 +1,4 @@
-package com.appministrator.synnectt;
+package com.appministrator.synnectt.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.appministrator.synnectt.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashScreenActivity extends AppCompatActivity {

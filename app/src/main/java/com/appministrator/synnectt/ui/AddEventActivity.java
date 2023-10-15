@@ -1,4 +1,4 @@
-package com.appministrator.synnectt;
+package com.appministrator.synnectt.ui;
 
 import static android.content.ContentValues.TAG;
 
@@ -24,6 +24,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+
+import com.appministrator.synnectt.R;
 
 public class AddEventActivity extends AppCompatActivity {
 

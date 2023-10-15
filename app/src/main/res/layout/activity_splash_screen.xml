@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    tools:context=".SplashScreenActivity">
+    tools:context=".ui.SplashScreenActivity">
     <!--android:background="@drawable/__bg__landing_page_shape"-->
 
     <LinearLayout android:gravity="center"

@@ -13,25 +13,25 @@
         android:theme="@style/Theme.Synnectt"
         tools:targetApi="31">
         <activity
-            android:name=".AddEventActivity"
+            android:name=".ui.AddEventActivity"
             android:exported="false" />
         <activity
-            android:name=".OrganizerActivity"
+            android:name=".ui.OrganizerActivity"
             android:exported="false" />
         <activity
-            android:name=".sponserRegister"
+            android:name=".ui.sponserRegister"
             android:exported="false" />
         <activity
-            android:name=".FacultyRegister"
+            android:name=".ui.FacultyRegister"
             android:exported="false" />
         <activity
-            android:name=".StudentRegister"
+            android:name=".ui.StudentRegister"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".ui.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".ui.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,10 +40,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
 
         <meta-data

@@ -4,6 +4,217 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddEventActivity">
+    tools:context=".ui.AddEventActivity">
+
+    <ScrollView android:id="@+id/new_event_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout android:id="@+id/linearColumnarrowleft"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_37pxv"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="@dimen/_10pxh"
+                android:layout_marginHorizontal="@dimen/_10pxh">
+                <ImageView android:id="@+id/newEventBackBtn"
+                    android:layout_height="@dimen/_22pxh"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="@dimen/_25pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSignup"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_11pxh"
+                    android:layout_marginStart="@dimen/_11pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="New Event"
+                    style="@style/txtAirbnbCerealAppmedium24" />
+            </LinearLayout>
+
+            <EditText
+                android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_12"
+                android:drawablePadding="@dimen/_18pxh"
+                android:drawableStart="@drawable/department_24"
+                android:ellipsize="end"
+                android:hint="Event Name"
+                android:id="@+id/stu_name"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_18pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_600"
+                style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_12"
+                android:drawablePadding="@dimen/_16pxh"
+                android:drawableStart="@drawable/img_user"
+                android:ellipsize="end"
+                android:hint="Organizer"
+                android:id="@+id/stu_net_id"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_18pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_600"
+                style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_12"
+                android:drawablePadding="@dimen/_16pxh"
+                android:drawableStart="@drawable/img_mappin"
+                android:ellipsize="end"
+                android:hint="Location"
+                android:inputType="textPostalAddress"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_18pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_600"
+                style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+
+            <TextView
+                android:drawablePadding="@dimen/_16pxh"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="Event Type"
+                android:fontFamily="@font/comfortaa"
+                android:textColorHint="@color/gray_600"
+                app:drawableStartCompat="@drawable/baseline_category_24" />
+
+            <RadioGroup
+                android:id="@+id/groupradio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radia_id1"
+                    android:text="Tech"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/comfortaa"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radia_id2"
+                    android:text="Non-Tech"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/comfortaa"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/radia_id3"
+                    android:text="Cultural"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/comfortaa"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:drawablePadding="@dimen/_16pxh"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="Date and Time"
+                android:fontFamily="@font/comfortaa"
+                android:textColorHint="@color/gray_600"
+                app:drawableStartCompat="@drawable/baseline_access_time_24" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/idBtnPickTime"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_12"
+                    style="@style/etSolidRoundedOutline"
+                    app:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                    android:text="HH:MM"
+                    android:textAllCaps="false" />
+                <Button
+                    android:id="@+id/idBtnPickDate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:background="@drawable/rectangle_bg_white_a700_border_gray_300_radius_12"
+                    style="@style/etSolidRoundedOutline"
+                    app:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                    android:text="DD/MM/YYYY"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submitNewEventBtn"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_34pxv" android:layout_width="@dimen/_271pxh"
+                android:text="Submit"
+                android:textStyle="bold"
+                android:textColor="@color/white_A700"
+                android:fontFamily="@font/comfortaa"
+                android:textSize="16sp"
+                android:textAllCaps="true"
+                android:drawableEnd="@drawable/img_arrowright"
+                android:drawablePadding="@dimen/_8pxh"
+                app:backgroundTint="@color/indigo_A200"
+                style="@style/groupStyleindigo_A200cornerRadius"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
