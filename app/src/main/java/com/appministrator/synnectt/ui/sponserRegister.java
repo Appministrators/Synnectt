@@ -41,6 +41,8 @@ public class sponserRegister extends AppCompatActivity {
         firebaseInit();
         setContentView(R.layout.activity_sponser_register);
 
+        getSupportActionBar().setTitle("Register");
+
         regBtn = findViewById(R.id.sponSubBtn);
         SPONNAMEedt = findViewById(R.id.Name_Incharge_edt);
         OrgPwedt = findViewById(R.id.org_pw_edt);
