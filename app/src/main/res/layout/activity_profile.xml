@@ -97,7 +97,6 @@
                 android:id="@+id/button"
                 android:layout_width="72dp"
                 android:layout_height="wrap_content"
-                android:drawable="android:color/transparent"
                 android:text="Edit" />
 
             <LinearLayout

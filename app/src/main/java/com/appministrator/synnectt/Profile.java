@@ -10,39 +10,41 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Profile extends AppCompatActivity {
 
     private TextView txtvw_fullname, txtvw_email, txtvw_registered, txtvw_participated;
-    private String fullName, email, about;
-    private ImageView imageView;
     private FirebaseAuth authProfile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        getSupportActionBar().setTitle("Profile");
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        txtvw_fullname=findViewById(R.id.textview_fullname);
-        txtvw_email = findViewById(R.id.textview_email);
-        txtvw_participated = findViewById(R.id.textview_participated);
-        txtvw_registered = findViewById(R.id.textview_registered);
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = auth.getCurrentUser();
 
-        authProfile = FirebaseAuth.getInstance();
-        FirebaseUser firebaseUser = authProfile.getCurrentUser();
+        if (currentUser != null) {
 
-        if(firebaseUser == null){
-            Toast.makeText(Profile.this, "Something went wrong! User not available", Toast.LENGTH_LONG).show();
-        }else{
-            showUserProfile(firebaseUser);
+            String uid = currentUser.getUid();
+
+            DocumentReference userRef = db.collection("users").document(uid);
+            userRef.get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        String studname = document.getString("studName");
+                        String netid = document.getString("studNetId");
+
+                    } else {
+                        // User data doesn't exist
+                    }
+                } else {
+                    // Error occurred while fetching user data
+                }
+            });
         }
-    }
-
-    private void showUserProfile(FirebaseUser firebaseUser) {
-        String userID = firebaseUser.getUid();
-        DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
-
-    }
-}
+}}
